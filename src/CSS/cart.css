@@ -1,0 +1,133 @@
+#cart-container{
+    margin: 2%;
+    padding: 3rem;
+    background-color: var(--light-gray);
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.cart-products{
+    flex: 1;
+    min-width: 30rem;
+}
+
+.cart-product-card{
+    margin: 2rem;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cart-product-card .card-img{
+    width: 50%;
+    height: 100%;
+    margin: 1rem;
+}
+
+.cart-product-card .card-img img{
+    width: 100%;
+    height: auto;
+    margin-top: 30%;
+}
+
+.cart-product-card .card-details{
+    width: 50%;
+    margin: 2rem;
+    line-height: 3.5rem;
+}
+
+.cart-product-card .card-details .price strike{
+    color: var(--dark-gray);
+    margin-left: 2rem;
+}
+
+.cart-product-card .card-details .offers span{
+    color: var(--dark-gray);
+}
+
+.cart-product-card .card-details .quantity .value{
+    border: 1px solid var(--dark-gray);
+    padding: 0.1rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.cart-product-card .card-details .quantity .icon{
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.cart-product-card .card-details .buttons{
+    margin: 2rem 0;
+}
+
+.cart-product-card .card-details .buttons button{
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+/* Price Details  */
+
+.cart-price-details{
+    flex: 0.5;
+    margin: 2rem;
+    max-width: 100%;
+    padding: 5rem;
+    min-width: 30rem;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+.cart-price-details span, div{
+    margin: 0.5rem;
+}
+
+.cart-price-details button{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+
+@media(max-width:998px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+    .cart-product-card .card-details .quantity .title{
+        display: block;
+    }
+}
+
+@media(max-width:640px){
+    html{
+        font-size: 38%;
+    }
+    .cart-product-card .card-details .quantity .title{
+        display: block;
+    }
+}
+
+@media(max-width:480px){
+    html{
+        font-size: 28%;
+    }
+
+    .cart-product-card{
+        flex-wrap: wrap;
+    }
+
+    .cart-product-card .card-details .quantity .title{
+        display: block;
+    }
+}

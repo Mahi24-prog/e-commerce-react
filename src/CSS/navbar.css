@@ -1,0 +1,71 @@
+#home-navbar{
+    height: fit-content;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.home-nav-left{
+    flex: 1;
+    margin-left: 4rem;
+    cursor: pointer;
+}
+
+.home-nav-left .brand-name{
+    color: var(--white);
+}
+
+.home-nav-mid{
+    flex: 1;
+    min-width: 18rem;
+    margin: 0 1rem;
+}
+
+.nav-mid-search input{
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.home-nav-right{
+    margin-left: auto;
+    flex: 1;
+}
+
+
+.nav-right-ele{
+    cursor: pointer;
+    color: white;
+}
+
+.home-nav-right .badge{
+    margin: 1rem;
+}
+
+.nav-right-ele .number{
+    background-color: var(--primary-dark-color);
+}
+
+@media(max-width:998px){
+    html{
+        font-size: 58%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media(max-width:640px){
+    html{
+        font-size: 38%;
+    }
+}
+
+@media(max-width:480px){
+    .home-nav-mid{
+        order: 3;
+    }
+}
