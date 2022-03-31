@@ -1,0 +1,63 @@
+.card-btn-link{
+    width:100%;
+}
+
+.btn-primary{
+    background-color: var(--primary-dark-color) !important;
+    font-size: 1.5rem !important;
+    min-width: 8rem;
+}
+
+.btn-secondary{
+    background-color: var(--secondary-color) !important;
+    font-size: 1.5rem !important;
+}
+
+.btn-outline-primary{
+    border: 2px solid var(--primary-dark-color) !important;
+    color: var(--primary-dark-color) !important;
+    background-color: var(--black) !important;
+    font-size: 1.5rem !important;
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--primary-dark-color) !important;
+    color: var(--white) !important;
+}
+
+.btn-outline-secondary{
+    border: 2px solid var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+    background-color: var(--white) !important;
+    font-size: 1.5rem !important;
+
+}
+
+.btn-outline-secondary:hover{
+    background-color: var(--secondary-color) !important;
+    color: var(--white) !important;
+}
+
+.like-filled-icon-btn{
+    color: var(--white);
+    cursor: pointer;
+    background-color: var(--primary-dark-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 1rem;
+    transition: all 0.5s ease;
+
+}
+
+.like-icon-btn{
+    color: var(--white);
+    cursor: pointer;
+    background-color: var(--dark-gray);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 1rem;
+    transition: all 0.5s ease;
+
+}

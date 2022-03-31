@@ -1,0 +1,81 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lg-h{
+    font-size: 3.5rem;
+}
+
+.md-h{
+    font-size: 2.5rem;
+}
+
+.sm-h{
+    font-size: 1.8rem;
+}
+
+.lg-text{
+    font-size: 2.5rem;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lg-h{
+    font-size: 3.5rem;
+}
+
+.md-h{
+    font-size: 2.5rem;
+}
+
+.sm-h{
+    font-size: 1.8rem;
+}
+
+.lg-text{
+    font-size: 2.5rem;
+}
+
+.md-text{
+    font-size: 1.8rem;
+}
+
+.sm-text{
+    font-size: 1.5rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.subtitle-text{
+    margin: 2rem 0;
+}
+
+.line{
+    background-color: var(--light-gray);
+    margin: 0.5rem 1rem;
+    color: var(--light-gray);
+}
+.md-text{
+    font-size: 1.8rem;
+}
+
+.sm-text{
+    font-size: 1.5rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.subtitle-text{
+    margin: 2rem 0;
+}
+
+.line{
+    background-color: var(--light-gray);
+    margin: 0.5rem 1rem;
+    color: var(--light-gray);
+}
