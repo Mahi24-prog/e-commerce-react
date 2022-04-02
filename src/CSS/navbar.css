@@ -14,6 +14,11 @@
     color: var(--white);
 }
 
+.home-nav-left .brand-logo{
+    width: 10rem;
+    height: auto;
+}
+
 .home-nav-mid{
     flex: 1;
     min-width: 18rem;

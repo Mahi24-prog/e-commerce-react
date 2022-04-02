@@ -1,11 +1,16 @@
 import "./App.css";
 import Router from './Router/Router'; 
-import Home from "./Pages/Home/Home"
+import { CategoryProvider } from "./Contexts/CategoryContext";
+import { ProductProvider } from "./Contexts/ProductContext";
 
 function App() {
   return (
     <>
-      <Router/>
+      <CategoryProvider>
+        <ProductProvider>
+            <Router/>
+       </ProductProvider>
+       </CategoryProvider>
     </>
   )
           

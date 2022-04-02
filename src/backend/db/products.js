@@ -1,9 +1,5 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Product Database can be added here.
- * You can add products of your wish with different attributes
- * */
 
 export const products = [
   {
@@ -26,6 +22,62 @@ export const products = [
     image:"https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     desc : 'Men Fluorescent Woven Design Sneakers',
     category:'Sneakers',
+    price : 599,
+    strikePrice : 699,
+    offer : '55% OFF',
+    rating : 4.5,
+    quantity : 1,
+    outOfStock: false,
+    fastDelivery : true
+},
+{
+    id:uuid(),
+    name : 'Roadstr',
+    image:"https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    desc : 'Men Fluorescent Woven Design Sneakers',
+    category:'Sneakers',
+    price : 799,
+    strikePrice : 899,
+    offer : '40% OFF',
+    rating : 3.5,
+    quantity : 1,
+    outOfStock: true,
+    fastDelivery : true
+},
+{
+    id:uuid(),
+    name : 'Roadstr',
+    image:"https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    desc : 'Men Fluorescent Woven Design Sneakers',
+    category:'Sneakers',
+    price : 1999,
+    strikePrice : 1199,
+    offer : '70% OFF',
+    rating : 4.8,
+    quantity : 1,
+    outOfStock: false,
+    fastDelivery : false
+},
+{
+    id:uuid(),
+    name : 'Roadstr',
+    image:"https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    desc : 'Men Fluorescent Woven Design Sneakers',
+    category:'Sneakers',
+    price : 3399,
+    strikePrice : 34999,
+    offer : '60% OFF',
+    rating : 4.5,
+    quantity : 1,
+    outOfStock: false,
+    fastDelivery : false
+},
+{
+    id:uuid(),
+    name : 'Roadstr',
+    image:"https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    desc : 'Men Fluorescent Woven Design Sneakers',
+    category:'Sneakers',
     price : 555,
     strikePrice : 599,
     offer : '20% OFF',
@@ -33,6 +85,23 @@ export const products = [
     quantity : 1,
     outOfStock: true,
     fastDelivery : false
+},
+
+
+{
+    id:uuid(),
+    name : 'Crew STREET',
+    image:"https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619__480.jpg",
+
+    desc : 'Men Fluorescent Green Woven Design Sneakers',
+    category:'Casual Shoes',
+    price : 299,
+    strikePrice : 499,
+    offer : '50% OFF',
+    rating : 3.5,
+    quantity : 1,
+    outOfStock: false,
+    fastDelivery : true
 },
 {
     id:uuid(),

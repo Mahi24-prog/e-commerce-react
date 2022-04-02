@@ -5,7 +5,8 @@ const Navbar = () => {
     return (
         <>
             <nav id="home-navbar" className="flex-ali-cen flex-wrap">
-        <div className="home-nav-left">
+        <div className="home-nav-left d-flex">
+            <img src='images/brand-logo.png' className='brand-logo'/>
             <Link to={"/"}><h1 className="brand-name lg-h">Apani Dukan</h1></Link>
         </div>
         <div className="home-nav-mid">
