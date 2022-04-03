@@ -24,7 +24,7 @@ const FeaturedCategories = () => {
             <div className="categories-wrapper flex-wrap">
                 {
                     categoryData.map(category => (
-                        <div className="category">
+                        <div className="category" key={category._id}>
                             <Link to="/product">
                                 <img src={category.image} alt="category image" 
                                     onClick= {() => setCategoryFilteredData(productsData.filter(product => product.category === category.name))

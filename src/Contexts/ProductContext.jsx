@@ -15,7 +15,6 @@ const ProductProvider = ({ children }) => {
     (async () => {
       try {
         const response = await fetch("/api/products", { method: "GET" })
-        console.log(response)
         const json = await response.json()
         setProductsData(json.products)
       } catch (error) {

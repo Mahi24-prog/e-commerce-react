@@ -92,6 +92,12 @@
     margin-top: 1rem;
 }
 
+.empty-cart{
+    width: 80;
+     height: 30vw;
+     margin:10%
+}
+
 /* Responsive */
 
 @media(max-width:998px){

@@ -9,8 +9,7 @@ export function ProductReducer(state, action) {
         case "Toggle_Stock": return({...state, outOfStock: !state.outOfStock})
         case "Toggle_Delivery": return({...state, fastDelivery: !state.fastDelivery})
         case "Clear": 
-        console.log("Click")
-        return({...state, sortBy: null, starRating: "1_And_Above",
+            return({...state, sortBy: null, starRating: "1_And_Above",
                             priceFilterValue : 1000000, outOfStock: true, fastDelivery : false})
         default: return ({...state});
     }

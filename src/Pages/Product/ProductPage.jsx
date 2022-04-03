@@ -8,7 +8,7 @@ const ProductPage = () => {
   return (
     <>
       <Navbar/>
-        <div id="product-container" class="d-flex">
+        <div id="product-container" className="d-flex">
           <Filters/>
           <Products/>   
         </div>
