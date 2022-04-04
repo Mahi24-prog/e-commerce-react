@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import { useProduct } from '../../Contexts/ProductContext'
 import { useCategory } from '../../Contexts/CategoryContext';
+import { useCart } from '../../Contexts/CartContext';
 
 const getSortedData = (productList, sortBy) => {
     if (sortBy && sortBy === "PRICE_HIGH_TO_LOW") {
@@ -26,29 +28,35 @@ const Products = () => {
     const { categoryFilteredData } = useCategory()
     const sortedData = getSortedData(categoryFilteredData, sortBy)
     const filterdData = getFiltedData(sortedData, { starRating, priceFilterValue, outOfStock, fastDelivery })
-
+    const { state : {cartProductList}, cartDispatch } = useCart();
 
     return (
         <>
-            <div class="products">
-                <div class="products-card-wrapper d-flex flex-wrap">
+            <div className="products">
+                <div className="products-card-wrapper d-flex flex-wrap">
                     {
                         filterdData.map(product => (
-                            <div class="card-with-badge sm-card card-product" key={product.id}>
-                                <i class="fa fa-heart-o fa-1x like-filled-icon-btn card-icon" aria-hidden="true"></i>
-                                <img class="card-img" src={product.image} alt="Image" />
-                                <div class="card-body">
-                                    <h2 class="card-title xsm-h">{product.name}</h2>
-                                    <p class="card-subtitle sm-text gray-text">{product.desc}</p>
+                            <div className="card-with-badge sm-card card-product" key={product.id}>
+                                <i className="fa fa-heart-o fa-1x like-filled-icon-btn card-icon" aria-hidden="true"></i>
+                                <img className="card-img" src={product.image} alt="Image" />
+                                <div className="card-body">
+                                    <h2 className="card-title xsm-h">{product.name}</h2>
+                                    <p className="card-subtitle sm-text gray-text">{product.desc}</p>
                                 </div>
-                                <div class="card-product-price">
-                                    <h2 class="product-price">RS.{product.price}</h2>
-                                    <div class="product-offer sm-text"><strike>Rs.{product.strikePrice}</strike> <span>({product.offer})</span>
-                                        <span class="rating">{product.rating}<i class="fas fa-star"></i></span>
+                                <div className="card-product-price">
+                                    <h2 className="product-price">RS.{product.price}</h2>
+                                    <div className="product-offer sm-text"><strike>Rs.{product.strikePrice}</strike> <span>({product.offer})</span>
+                                        <span className="rating">{product.rating}<i className="fas fa-star"></i></span>
                                     </div>
                                 </div>
                                 <div className="card-footer flex-col">
-                                    <button className="btn-primary btn" onclick="location.href='cart.html'">Add to Cart</button>
+                                    {
+                                        cartProductList.some(cartProduct => cartProduct.id === product.id) ?
+                                            <Link to="/cart" className='card-btn-link'>
+                                                <button className="btn-primary btn">Go to Cart</button>
+                                            </Link> :
+                                            <button className="btn-primary btn" onClick={() => cartDispatch({ type: 'Add_To_Cart', payload: product.id })}>Add to Cart</button>
+                                    }
                                     <button className="btn-secondary btn" onclick="location.href='wishlist.html'">Add to Wishlist</button>
                                 </div>
                             </div>
