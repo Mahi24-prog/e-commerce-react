@@ -82,6 +82,10 @@
     flex: 1;
 }
 
+.loader{
+    margin: 2% 50%;
+}
+
 @media(max-width:768px){
     .new-arrival-card{
         min-width: 90%;

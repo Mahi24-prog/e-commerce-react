@@ -3,6 +3,7 @@ import Router from './Router/Router';
 import { CategoryProvider } from "./Contexts/CategoryContext";
 import { ProductProvider } from "./Contexts/ProductContext";
 import { CartProvider } from "./Contexts/CartContext";
+import { WishlistProvider } from "./Contexts/wishlistContext";
 
 function App() {
   return (
@@ -10,10 +11,12 @@ function App() {
       <CategoryProvider>
         <ProductProvider>
           <CartProvider>
-            <Router/>
+            <WishlistProvider>
+              <Router/>
+            </WishlistProvider>
           </CartProvider>
-       </ProductProvider>
-       </CategoryProvider>
+        </ProductProvider>
+      </CategoryProvider>
     </>
   )
           
