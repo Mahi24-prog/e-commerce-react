@@ -16,7 +16,7 @@
 .btn-outline-primary{
     border: 2px solid var(--primary-dark-color) !important;
     color: var(--primary-dark-color) !important;
-    background-color: var(--black) !important;
+    background-color: var(--white);
     font-size: 1.5rem !important;
 }
 

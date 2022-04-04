@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useProduct } from '../../Contexts/ProductContext'
 import { useCategory } from '../../Contexts/CategoryContext';
 import { useCart } from '../../Contexts/CartContext';
+import { useWishlist } from '../../Contexts/wishlistContext';
 
 const getSortedData = (productList, sortBy) => {
     if (sortBy && sortBy === "PRICE_HIGH_TO_LOW") {
@@ -29,6 +30,7 @@ const Products = () => {
     const sortedData = getSortedData(categoryFilteredData, sortBy)
     const filterdData = getFiltedData(sortedData, { starRating, priceFilterValue, outOfStock, fastDelivery })
     const { state : {cartProductList}, cartDispatch } = useCart();
+    const { state : {wishlistProductList} , wishlistDispatch } = useWishlist();
 
     return (
         <>
@@ -53,11 +55,18 @@ const Products = () => {
                                     {
                                         cartProductList.some(cartProduct => cartProduct.id === product.id) ?
                                             <Link to="/cart" className='card-btn-link'>
-                                                <button className="btn-primary btn">Go to Cart</button>
+                                                <button className="btn-outline-primary btn outline-btn">Go to Cart</button>
                                             </Link> :
                                             <button className="btn-primary btn" onClick={() => cartDispatch({ type: 'Add_To_Cart', payload: product.id })}>Add to Cart</button>
                                     }
-                                    <button className="btn-secondary btn" onclick="location.href='wishlist.html'">Add to Wishlist</button>
+                                    {
+                                        wishlistProductList.some(wishlistProduct => wishlistProduct.id === product.id) ?
+                                            <Link to="/wishlist" className='card-btn-link'>
+                                                <button className="btn-outline-secondary btn btn-outline">Go to Wishlist</button>
+                                            </Link> :
+                                            <button className="btn-secondary btn"
+                                                onClick={() => wishlistDispatch({ type: "Add_To_Wishlist", payload: product.id })}>Add to Wishlist</button>
+                                    }
                                 </div>
                             </div>
                         ))

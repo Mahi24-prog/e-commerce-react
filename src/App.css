@@ -26,8 +26,9 @@
     --light-gray:#E5E5E5;
 }
 
-
-
+::-webkit-scrollbar {
+    display: none;
+}
 
 /* Media Query for Responsible text size and screen  */
 html{

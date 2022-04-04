@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from '../../Contexts/CartContext'
+import { useWishlist } from '../../Contexts/wishlistContext'
 
 const Navbar = () => {
     const {state : {cartCount}} = useCart()
+    const{state : {wishlistCount}} =  useWishlist()
     return (
         <>
             <nav id="home-navbar" className="flex-ali-cen flex-wrap">
@@ -21,7 +23,7 @@ const Navbar = () => {
                 <Link to={"/wishlist"}>
                 <i className="fas fa-heart lg-text"></i>
                 </Link> 
-                <div className="number sm-text">4</div>
+                <div className="number sm-text">{wishlistCount}</div>
             </div>
             <div className="badge nav-right-ele">
                 <Link to={"/cart"}>
