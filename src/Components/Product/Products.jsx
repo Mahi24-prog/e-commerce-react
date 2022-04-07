@@ -57,7 +57,7 @@ const Products = () => {
                                             <Link to="/cart" className='card-btn-link'>
                                                 <button className="btn-outline-primary btn outline-btn">Go to Cart</button>
                                             </Link> :
-                                            <button className="btn-primary btn" onClick={() => cartDispatch({ type: 'Add_To_Cart', payload: product.id })}>Add to Cart</button>
+                                            <button className="btn-primary btn" onClick={() => cartDispatch({ type: 'ADD_TO_CART', payload: product.id })}>Add to Cart</button>
                                     }
                                     {
                                         wishlistProductList.some(wishlistProduct => wishlistProduct.id === product.id) ?
@@ -65,7 +65,7 @@ const Products = () => {
                                                 <button className="btn-outline-secondary btn btn-outline">Go to Wishlist</button>
                                             </Link> :
                                             <button className="btn-secondary btn"
-                                                onClick={() => wishlistDispatch({ type: "Add_To_Wishlist", payload: product.id })}>Add to Wishlist</button>
+                                                onClick={() => wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: product.id })}>Add to Wishlist</button>
                                     }
                                 </div>
                             </div>

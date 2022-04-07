@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 const SignupForm = () => {
 
   return (
@@ -15,7 +16,9 @@ const SignupForm = () => {
               <span className="sm-text">I accept all terms & conditions</span>
             </div>
             <button className="btn-primary btn">Signup</button>
-            <h3 className="sm-text text-center">Already have an account<i className="fa fa-arrow-right md-text"></i></h3>
+            <Link to={"/login"}>
+              <h3 className="sm-text text-center">Already have an account<i className="fa fa-arrow-right md-text"></i></h3>
+            </Link>
           </div>
         </form>
       </div>

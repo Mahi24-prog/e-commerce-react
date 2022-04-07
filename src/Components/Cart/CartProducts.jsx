@@ -26,11 +26,11 @@ const CartProducts = () => {
                                 </div>
                                 <div className="quantity">
                                     <span className="sm-text title">Quantity :</span>
-                                    <span onClick={()=> cartDispatch({type:"Dec_Quantity", payload:product.id})}>
+                                    <span onClick={()=> cartDispatch({type:"DEC_QUANTITY", payload:product.id})}>
                                         <i className="fa fa-minus-circle sm-text icon"></i>
                                     </span>
                                     <span className="sm-text value">{product.quantity}</span>
-                                    <span onClick={()=> cartDispatch({type:"Inc_Quantity", payload:product.id})}>
+                                    <span onClick={()=> cartDispatch({type:"INC_QUANTITY", payload:product.id})}>
                                         <i className="fa fa-plus-circle sm-text icon"></i>
                                     </span>
                                 </div>
@@ -41,10 +41,10 @@ const CartProducts = () => {
                                                 <button className="btn-primary btn">Go to Wishlist</button>
                                         </Link>:
                                         <button className="btn-primary btn" 
-                                        onClick={() => wishlistDispatch({type:"Add_To_Wishlist", payload:product.id})}
+                                        onClick={() => wishlistDispatch({type:"ADD_TO_WISHLIST", payload:product.id})}
                                            >Move to Wishlist</button>
                                     }
-                                    <button onClick={()=> cartDispatch({type:"Remove_From_Cart", payload:product.id})}
+                                    <button onClick={()=> cartDispatch({type:"REMOVE_FROM_CART", payload:product.id})}
                                     className="btn-outline-secondary btn">Remove From Cart</button>
                                 </div>
                             </div>

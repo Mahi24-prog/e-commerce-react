@@ -9,9 +9,10 @@ const Navbar = () => {
     return (
         <>
             <nav id="home-navbar" className="flex-ali-cen flex-wrap">
-        <div className="home-nav-left d-flex">
+        <div className="home-nav-left flex-ali-cen">
             <img src='images/brand-logo.png' className='brand-logo' alt='brand img'/>
-            <Link to={"/"}><h1 className="brand-name lg-h">Apani Dukan</h1></Link>
+            <Link to={"/"}><h1 className="brand-name sm-h">Apani<br/>Dukan</h1></Link>
+            <Link to={"/product"}><h1 className="brand-name sm-h nav-left-ele">Products</h1></Link>
         </div>
         <div className="home-nav-mid">
             <div className="nav-mid-search">

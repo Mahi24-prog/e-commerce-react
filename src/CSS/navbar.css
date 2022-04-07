@@ -10,13 +10,31 @@
     cursor: pointer;
 }
 
-.home-nav-left .brand-name{
-    color: var(--white);
-}
-
 .home-nav-left .brand-logo{
     width: 10rem;
     height: auto;
+}
+
+.home-nav-left .brand-name{
+    color: var(--white);
+    transition: color .3s ease-in-out;
+}
+
+.home-nav-left .brand-name:hover{
+    color: var(--primary-dark-color);
+    text-decoration: underline;
+}
+
+.nav-left-ele{
+    cursor: pointer;
+    color: white;
+    margin: 0 50%;
+    transition: color .3s ease-in-out;
+}
+
+.nav-left-ele:hover{
+    color: var(--primary-dark-color);
+    text-decoration: underline;
 }
 
 .home-nav-mid{

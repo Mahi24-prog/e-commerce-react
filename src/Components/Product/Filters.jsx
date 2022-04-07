@@ -8,8 +8,8 @@ const Filters = () => {
                 <div className="filter-header d-flex">
                     <h2 className="md-text">Filters</h2>
                     <button className='md-text btn'
-                     onClick={() => dispatch({type : "Clear"})}
-                    >Clear</button>
+                     onClick={() => dispatch({type : "CLEAR"})}
+                    >CLEAR</button>
                 </div>
                 <div className="price filter-item">
                     <h3 className="sm-text filter-title">Price</h3>
@@ -19,27 +19,27 @@ const Filters = () => {
                         <span id="end">5000</span>
                     </div> 
                     <input className="price-slider" type="range" min="200" max="5000" value={priceFilterValue}
-                        onChange={(e) => dispatch({type:"PriceFilter", payload:e.target.value})}
+                        onChange={(e) => dispatch({type:"PRICE_FILTER", payload:e.target.value})}
                     />
                 </div>
                 <div className="filter-rating filter-item">
                     <h3 className="sm-text filter-title">Rating</h3>
                     <div className="filter-rating-item">
                         <input type="radio" id="4star&above" name="filter-rating" value="4star&above"
-                            onChange={() => dispatch({ type: "FilterRating", payload: "4_And_Above" })}
+                            onChange={() => dispatch({ type: "FILTER_RATING", payload: "4_And_Above" })}
                         />
                         <label for="4star&above" className="sm-text">4 Star and above</label>
                     </div>
                     <div className="filter-rating-item"><input type="radio" id="3star&above" name="filter-rating" value="3star&above"
-                        onChange={() => dispatch({ type: "FilterRating", payload: "3_And_Above" })}
+                        onChange={() => dispatch({ type: "FILTER_RATING", payload: "3_And_Above" })}
                     />
                         <label for="3star&above" className="sm-text">3 Star and above</label></div>
                     <div className="filter-rating-item"><input type="radio" id="2star&above" name="filter-rating" value="2star&above"
-                        onChange={() => dispatch({ type: "FilterRating", payload: "2_And_Above" })}
+                        onChange={() => dispatch({ type: "FILTER_RATING", payload: "2_And_Above" })}
                     />
                         <label for="2star&above" className="sm-text">2 Star and above</label></div>
                     <div className="filter-rating-item"><input type="radio" id="1star&above" name="filter-rating" value="1star&above"
-                        onChange={() => dispatch({ type: "FilterRating", payload: "1_And_Above" })}
+                        onChange={() => dispatch({ type: "FILTER_RATING", payload: "1_And_Above" })}
                     />
                         <label for="1star&above" className="sm-text">1 Star and above</label></div>
 
@@ -63,14 +63,14 @@ const Filters = () => {
                     <div className="sortby-item">
                         <input type="checkbox" id="out-of-stock" name="filter"
                             checked={outOfStock}
-                            onChange={() => dispatch({ type: "Toggle_Stock"})}
+                            onChange={() => dispatch({ type: "TOGGLE_STOCK"})}
                         />
                         <label for="out-of-stock" className="sm-text">Include Out Of Stock</label>
                     </div>
                     <div className="sortby-item">
                         <input type="checkbox" id="fast-delivery" name="filter"
                             checked={fastDelivery}
-                            onChange={() => dispatch({ type: "Toggle_Delivery"})}
+                            onChange={() => dispatch({ type: "TOGGLE_DELIVERY"})}
                         />
                         <label for="out-of-stock" className="sm-text">Fast Delivery Only</label>
                     </div>
